@@ -12,79 +12,60 @@
         android:layout_height="90dp"
         android:background="#633535"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/content"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp"></LinearLayout>
+        app:layout_constraintBottom_toTopOf="@+id/generador_textos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/content"
-        android:layout_width="match_parent"
-        android:layout_height="650dp"
-        android:background="#AAE1E8"
+        android:id="@+id/generador_textos"
+        android:layout_width="412dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header"
-        tools:layout_editor_absoluteX="0dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
-        <LinearLayout
-            android:id="@+id/post2"
-            android:layout_width="@dimen/post_width"
+        <Button
+            android:id="@+id/button_texto"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#FBFBFB"
-            android:orientation="vertical">
+            android:text="@string/crear_publicacion" />
 
-            <ImageView
-                android:id="@+id/imageView2"
+        <ScrollView
+            android:id="@+id/s"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/scrolleable"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@tools:sample/avatars" />
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/post_text2" />
-        </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/post2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FBFBFB"
+                    android:orientation="vertical">
 
-        <LinearLayout
-            android:id="@+id/post1"
-            android:layout_width="@dimen/post_width"
-            android:layout_height="wrap_content"
-            android:background="#FBFBFB"
-            android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@tools:sample/avatars" />
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/post_text2" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/post_text1" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/post3"
-            android:layout_width="@dimen/post_width"
-            android:layout_height="wrap_content"
-            android:background="#FBFBFB"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@tools:sample/avatars" />
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/post_text3" />
-        </LinearLayout>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
